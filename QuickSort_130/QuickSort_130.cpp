@@ -16,16 +16,17 @@ void input() {
 
         if (n <= 20)
             break;
-        else cout << "\nmaksimum panjang array adalah 20 element" << endl;
+        else 
+            cout << "\nmaksimum panjang array adalah 20 element" << endl;
     }
 
     cout << "\n----------------------------------" << endl;
     cout << "\nEnter Array Element" << endl;
     cout << "\n----------------------------------" << endl;
 
-    for (int i = 0; 1 < n; i++) {
+    for (int i = 0; i < n; i++) {
         cout << "<" << (i + 1) << ">";
-        cin >> arr[1];
+        cin >> arr[i];
     }
 }
 
@@ -50,7 +51,7 @@ void quick_sort(int low, int high) {
 
     while (i <= j) {
         //search for an element greater then pivot
-        while ((arr[i] <= pivot) && (1 <= high)) {
+        while ((arr[i] <= pivot) && (j <= high)) {
             i++;
             cmp_count++;
         }
@@ -70,10 +71,10 @@ void quick_sort(int low, int high) {
         swap(low, j);
         mov_count++;
     }
-    quick_sort(low, j - i);
+    quick_sort(low, j - 1);
 
     //sort of the lost on the right of pivot using quick sort
-    quick_sort(j + i, high);
+    quick_sort(j + 1, high);
 }
 
 void display() {
@@ -99,4 +100,3 @@ int main()
     system("pausse");
     return 0;
 }
-
