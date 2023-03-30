@@ -29,6 +29,16 @@ void input() {
     }
 }
 
+//swap the element to indeks x with the element at indeks y
+void swap(int x, int y) {
+    int temp;
+
+    temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+}
+
+
 int main()
 {
     cout << endl;
