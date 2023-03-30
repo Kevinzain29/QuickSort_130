@@ -92,5 +92,11 @@ void display() {
 int main()
 {
     input();
+
+    //sort the array using quick sort
+    quick_sort(0, n - 1);
+    display();
+    system("pausse");
+    return 0;
 }
 
