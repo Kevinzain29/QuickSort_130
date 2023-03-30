@@ -47,6 +47,24 @@ void quick_sort(int low, int high) {
 
     i = low + 1;
     j = high;
+
+    while (i <= j) {
+        //search for an element greater then pivot
+        while ((arr[i] <= pivot) && (1 <= high)) {
+            i++;
+            cmp_count++;
+        }
+        //search for an element less than or equal to pivot 
+        while ((arr[j] > pivot) && (j >= low)) {
+            j--;
+            cmp_count++;
+        }
+        cmp_count++;
+        if (i < j) {                //if the greater element is on the left of the element
+            swap(i, j);             //swap the element at index 1 with the at index
+            mov_count++;
+        }
+    }
 }
 
 int main()
